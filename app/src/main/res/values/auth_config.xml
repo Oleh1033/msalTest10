@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="client_id">0b0f5f74-3088-4495-bb3d-dcc6966fd7d2</string>
+    <string name="ms_graph">https://graph.microsoft.com/v1.0/me</string>
+
+</resources>
