@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.support.v7.app.AppCompatActivity
+import android.widget.TextView
+import android.widget.Toast
 import com.microsoft.identity.client.AuthenticationCallback
 import com.microsoft.identity.client.AuthenticationResult
 import com.microsoft.identity.client.PublicClientApplication
@@ -30,6 +32,10 @@ class MainActivity : AppCompatActivity() {
             myApp?.acquireToken(this, SCOPES, object: AuthenticationCallback{
                 override fun onSuccess(authenticationResult: AuthenticationResult?) {
                     val a = authenticationResult?.accessToken
+
+                    val textView: TextView = findViewById(R.id.textView) as TextView
+                    textView.text = authenticationResult?.accessToken
+
                 }
 
                 override fun onCancel() {
