@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onSuccess(authenticationResult: AuthenticationResult?) {
                     val a = authenticationResult?.accessToken
 
-                    val textView: TextView = findViewById(R.id.textView) as TextView
-                    textView.text = authenticationResult?.accessToken
-
+                    textView2.text = authenticationResult?.expiresOn?.toString()
                 }
 
                 override fun onCancel() {
