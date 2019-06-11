@@ -1,8 +1,13 @@
 package com.azuresamples.azureadsampleapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.BaseAdapter
 import android.widget.Toast
 import com.azuresamples.azureadsampleapp.azureadsampleapp.Kudos
 import com.azuresamples.azureadsampleapp.azureadsampleapp.TestModel
@@ -102,6 +107,31 @@ class MainActivity : AppCompatActivity() {
                 e?.printStackTrace()
             }
         })
+    }
+
+    private class MyCustomAdapter(context: Context): BaseAdapter() {
+
+        private val mContext: Context
+
+        init {
+            mContext = context
+        }
+        override fun getCount(): Int {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun getItem(position: Int): Any {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun getItemId(position: Int): Long {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            val layoutInflater = LayoutInflater.from(mContext)
+            val rowMain = layoutInflater.inflate(R.layout.row_main, viewGroup, false)
+        }
     }
 
 }
