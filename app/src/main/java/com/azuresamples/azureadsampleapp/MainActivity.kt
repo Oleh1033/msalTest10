@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
         callGraph.setOnClickListener {
             myApp?.acquireToken(this, SCOPES, object: AuthenticationCallback{
                 override fun onSuccess(authenticationResult: AuthenticationResult?) {
-                    val a = authenticationResult?.accessToken
+              //      val a = authenticationResult?.accessToken
 
-                    textView2.text = authenticationResult?.expiresOn?.toString()
+                                         textView2.text = authenticationResult?.expiresOn?.toString()
                 }
 
                 override fun onCancel() {
@@ -57,4 +57,5 @@ class MainActivity : AppCompatActivity() {
 
         myApp?.handleInteractiveRequestRedirect(requestCode,resultCode, data)
     }
+
 }

@@ -15,7 +15,6 @@
         android:background="#00a1f1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
         android:textAllCaps="false" />
 
     <TextView
@@ -23,5 +22,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.azuresamples.azureadsampleapp.azureadsampleapp.fragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>
